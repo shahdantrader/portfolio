@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Khairul Shahdan — Technical Team Lead with 8+ years delivering enterprise web and mobile systems across government, fintech, and business sectors." />
+  <meta name="author" content="Khairul Shahdan" />
+  <title>Khairul Shahdan — Technical Lead</title>
+
+  <!-- Google Fonts: Cormorant Garamond (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Lucide Icons (lightweight, tree-shakable) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="nav" aria-label="Primary navigation">
+    <div class="nav__inner">
+      <!-- Logo / Brand -->
+      <a href="#hero" class="nav__logo" aria-label="Back to top">KS</a>
+
+      <!-- Nav Links (desktop) -->
+      <ul class="nav__links" role="list">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#certificates" class="nav__link">Certificates</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <!-- Mobile hamburger -->
+      <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu overlay -->
+    <div class="nav__mobile" id="navMobile" aria-hidden="true">
+      <ul class="nav__mobile-links" role="list">
+        <li><a href="#about" class="nav__mobile-link">About</a></li>
+        <li><a href="#projects" class="nav__mobile-link">Projects</a></li>
+        <li><a href="#certificates" class="nav__mobile-link">Certificates</a></li>
+        <li><a href="#contact" class="nav__mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" id="hero" aria-labelledby="heroHeading">
+    <!-- Watermark initials — purely decorative -->
+    <div class="hero__watermark" aria-hidden="true">KS</div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal">Hello, I'm</p>
+      <h1 class="hero__name reveal" id="heroHeading">Khairul<br /><em>Shahdan</em></h1>
+      <p class="hero__tagline reveal">
+        Technical Team Lead · 8+ years building enterprise<br class="break--desktop" /> systems for government, fintech &amp; beyond.
+      </p>
+
+      <div class="hero__cta reveal">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+      </div>
+
+      <!-- Social links -->
+      <div class="hero__socials reveal">
+        <a
+          href="https://github.com/shahdantrade"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="GitHub"
+        >
+          <i data-lucide="github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/shahdansalleh/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="LinkedIn"
+        >
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a
+          href="mailto:shahdantrade@gmail.com"
+          class="social-link"
+          aria-label="Email"
+        >
+          <i data-lucide="mail"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="hero__scroll" aria-label="Scroll to About section">
+      <i data-lucide="arrow-down"></i>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       ABOUT / EXPERIENCE
+  ============================================================ -->
+  <section class="section about" id="about" aria-labelledby="aboutHeading">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="section__header reveal">
+        <span class="section__label">Background</span>
+        <h2 class="section__title" id="aboutHeading">About Me</h2>
+      </div>
+
+      <!-- About grid: bio + skills side by side -->
+      <div class="about__grid">
+
+        <!-- Bio -->
+        <div class="about__bio reveal">
+          <p>
+            I'm a Technical Team Lead based in Kuala Lumpur with 8+ years of experience delivering
+            enterprise web and mobile systems across government, fintech, and business sectors.
+            I've led full SDLC lifecycles — from system architecture and development through to
+            deployment, production support, and security governance.
+          </p>
+          <p>
+            My core strength lies at the intersection of deep technical execution and cross-functional
+            leadership. I've managed mission-critical government financial systems, handled 16,000+
+            support tickets under SLA, and built Oracle database architectures processing multi-million
+            record datasets with zero data loss. My stack spans Java, PL/SQL, Oracle, React, and beyond.
+          </p>
+          <p>
+            I hold certifications in Power BI, Cybersecurity Fundamentals, Business Analysis with AI,
+            Scrum, and Kanban. Whether I'm leading an incident triage call or designing a database
+            refresh cycle, I care about systems that are stable, secure, and built to last.
+          </p>
+
+          <a
+            href="https://github.com/shahdantrade"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--outline"
+          >
+            <i data-lucide="github"></i> View GitHub
+          </a>
+        </div>
+
+        <!-- Skills -->
+        <div class="about__skills reveal">
+          <h3 class="skills__heading">Technologies</h3>
+
+          <!-- Skill categories are rendered here by JS, but we include static fallback -->
+          <div class="skills__categories" id="skillsContainer">
+            <!-- Populated by script.js -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Experience Timeline -->
+      <div class="experience reveal">
+        <h3 class="experience__heading">Experience</h3>
+        <div class="timeline" id="timelineContainer">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS
+  ============================================================ -->
+  <section class="section projects" id="projects" aria-labelledby="projectsHeading">
+    <div class="container">
+
+      <div class="section__header reveal">
+        <span class="section__label">Selected Work</span>
+        <h2 class="section__title" id="projectsHeading">Projects</h2>
+      </div>
+
+      <!-- Project cards rendered by script.js -->
+      <div class="projects__grid" id="projectsGrid">
+        <!-- Populated by script.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CERTIFICATES
+  ============================================================ -->
+  <section class="section certificates" id="certificates" aria-labelledby="certificatesHeading">
+    <div class="container">
+
+      <div class="section__header reveal">
+        <span class="section__label">Credentials</span>
+        <h2 class="section__title" id="certificatesHeading">Certifications</h2>
+      </div>
+
+      <!-- Certificate cards rendered by script.js -->
+      <div class="certificates__grid" id="certificatesGrid">
+        <!-- Populated by script.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section class="section contact" id="contact" aria-labelledby="contactHeading">
+    <div class="container">
+
+      <div class="section__header reveal">
+        <span class="section__label">Say Hello</span>
+        <h2 class="section__title" id="contactHeading">Get in Touch</h2>
+      </div>
+
+      <div class="contact__grid">
+
+        <!-- Left: copy -->
+        <div class="contact__copy reveal">
+          <p>
+            Have a project in mind, want to collaborate, or just want to say hi?
+            My inbox is always open. I'll do my best to get back to you promptly.
+          </p>
+          <ul class="contact__details" role="list">
+            <li>
+              <i data-lucide="mail"></i>
+              <a href="mailto:shahdantrade@gmail.com">shahdantrade@gmail.com</a>
+            </li>
+            <li>
+              <i data-lucide="map-pin"></i>
+              <span>Kuala Lumpur, Malaysia</span>
+            </li>
+            <li>
+              <i data-lucide="linkedin"></i>
+              <a href="https://www.linkedin.com/in/shahdansalleh/" target="_blank" rel="noopener noreferrer">
+                linkedin.com/in/shahdansalleh
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: form -->
+ 
+        <form
+          class="contact__form reveal"
+          id="contactForm"
+          action="https://formspree.io/f/mojzpnpe"
+          method="POST"
+          novalidate
+        >
+
+          <div class="form__group">
+            <label class="form__label" for="name">Name</label>
+            <input
+              class="form__input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your full name"
+              autocomplete="name"
+              required
+            />
+            <span class="form__error" id="nameError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="email">Email</label>
+            <input
+              class="form__input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your@email.com"
+              autocomplete="email"
+              required
+            />
+            <span class="form__error" id="emailError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="message">Message</label>
+            <textarea
+              class="form__input form__textarea"
+              id="message"
+              name="message"
+              placeholder="Tell me about your project..."
+              rows="5"
+              required
+            ></textarea>
+            <span class="form__error" id="messageError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            <span class="btn__text">Send Message</span>
+            <span class="btn__loading" aria-hidden="true">
+              <i data-lucide="loader-2"></i>
+            </span>
+          </button>
+
+          <!-- Success / Error banners (shown by JS) -->
+          <div class="form__banner form__banner--success" id="formSuccess" role="status" aria-live="polite" hidden>
+            <i data-lucide="check-circle-2"></i>
+            <p>Message sent! I'll be in touch soon.</p>
+          </div>
+          <div class="form__banner form__banner--error" id="formError" role="alert" aria-live="assertive" hidden>
+            <i data-lucide="alert-circle"></i>
+            <p>Something went wrong. Please email me directly at <a href="mailto:shahdantrade@gmail.com">shahdantrade@gmail.com</a>.</p>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p class="footer__copy">
+        &copy; <span id="year"></span> Khairul Shahdan. Built with care.
+      </p>
+      <div class="footer__socials">
+        <a href="https://github.com/shahdantrade" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/shahdansalleh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a href="mailto:shahdantrade@gmail.com" aria-label="Email">
+          <i data-lucide="mail"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
