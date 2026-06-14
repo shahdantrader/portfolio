@@ -48,7 +48,7 @@ const PROJECTS = [
     desc:
       "Led front-end development team building cross-platform iOS and Android applications using ReactJS. Managed full project lifecycle with Scrum methodology, CI/CD pipeline via Jira, and API integration with Slim backend.",
     tags: ["ReactJS", "JavaScript", "Expo", "Jira", "Figma"],
-    github: "https://github.com/shahdantrade",
+    github: "https://github.com/shahdantrader",
     live: null,
     featured: true,
   },
@@ -75,7 +75,7 @@ const PROJECTS = [
     desc:
       "Developed the cartoola.my / cartoola.com.sg web platform from ground up. Implemented redesigns, built hybrid web-apps with Joomla integration, and delivered Android and iOS applications.",
     tags: ["PHP", "Joomla", "JavaScript", "Android", "iOS"],
-    github: "https://github.com/shahdantrade",
+    github: "https://github.com/shahdantrader",
     live: null,
     featured: false,
   },
@@ -516,9 +516,9 @@ function initContactForm() {
     try {
       // Guard: if Formspree ID hasn't been replaced yet, demo a success
       // so the UI can be tested without a real endpoint.
-      if (form.action.includes("YOUR_FORM_ID")) {
+      if (form.action.includes("mojzpnpe")) {
         console.warn(
-          "Portfolio: replace YOUR_FORM_ID in index.html with your Formspree endpoint."
+          "Portfolio: replace mojzpnpe in index.html with your Formspree endpoint."
         );
         await new Promise((r) => setTimeout(r, 1200)); // simulate network delay
         succeeded = true;
