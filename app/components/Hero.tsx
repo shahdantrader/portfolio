@@ -13,6 +13,7 @@ const revealVariants = {
     y: 0,
     transition: {
       duration: DURATION,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ease: [0.16, 1, 0.3, 1] as any,
       delay,
     },
@@ -50,7 +51,7 @@ export default function Hero() {
           whileInView="visible"
           viewport={{ once: true, margin: '0px 0px -80px 0px' }}
         >
-          Hello, I'm
+          Hello, I&apos;m
         </motion.p>
 
         {/* Name */}

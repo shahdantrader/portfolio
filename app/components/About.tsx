@@ -15,6 +15,7 @@ const revealVariants = {
     y: 0,
     transition: {
       duration: DURATION,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ease: [0.16, 1, 0.3, 1] as any,
     },
   },
@@ -69,15 +70,15 @@ export default function About() {
             className="space-y-6"
           >
             <p className="text-muted text-base leading-relaxed">
-              I'm a Technical Team Lead based in Kuala Lumpur with 8+ years of
+              I&apos;m a Technical Team Lead based in Kuala Lumpur with 8+ years of
               experience delivering enterprise web and mobile systems across
-              government, fintech, and business sectors. I've led full SDLC
+              government, fintech, and business sectors. I&apos;ve led full SDLC
               lifecycles — from system architecture and development through to
               deployment, production support, and security governance.
             </p>
             <p className="text-muted text-base leading-relaxed">
               My core strength lies at the intersection of deep technical
-              execution and cross-functional leadership. I've managed
+              execution and cross-functional leadership. I&apos;ve managed
               mission-critical government financial systems, handled 16,000+
               support tickets under SLA, and built Oracle database architectures
               processing multi-million record datasets with zero data loss. My
@@ -85,7 +86,7 @@ export default function About() {
             </p>
             <p className="text-muted text-base leading-relaxed">
               I hold certifications in Power BI, Cybersecurity Fundamentals,
-              Business Analysis with AI, Scrum, and Kanban. Whether I'm leading
+              Business Analysis with AI, Scrum, and Kanban. Whether I&apos;m leading
               an incident triage call or designing a database refresh cycle, I
               care about systems that are stable, secure, and built to last.
             </p>
