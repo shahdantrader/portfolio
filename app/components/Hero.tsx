@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Code, Share2, Mail, ArrowDown } from 'lucide-react';
+import { Mail, ArrowDown } from 'lucide-react';
+import { GitHubIcon, LinkedInIcon } from './icons/BrandIcons';
 
 const DURATION = 0.6;
 
@@ -94,13 +95,13 @@ export default function Hero() {
         >
           <Link
             href="#projects"
-            className="px-6 py-3 bg-accent text-bg font-medium hover:bg-opacity-90 transition-colors duration-200"
+            className="inline-flex items-center gap-2 px-7 py-3 text-sm font-medium tracking-wide rounded-sm bg-accent text-bg border border-accent transition-all duration-200 hover:-translate-y-px hover:bg-[#d4b47a] hover:border-[#d4b47a] hover:shadow-[0_4px_20px_rgba(201,169,110,0.25)]"
           >
             View My Work
           </Link>
           <Link
             href="#contact"
-            className="px-6 py-3 border border-accent text-accent font-medium hover:bg-accent hover:text-bg transition-colors duration-200"
+            className="inline-flex items-center gap-2 px-7 py-3 text-sm font-medium tracking-wide rounded-sm bg-transparent text-text border border-border transition-all duration-200 hover:-translate-y-px hover:border-accent hover:text-accent"
           >
             Get in Touch
           </Link>
@@ -122,7 +123,7 @@ export default function Hero() {
             className="text-muted hover:text-accent transition-all duration-200 hover:-translate-y-0.5"
             aria-label="GitHub"
           >
-            <Code size={20} />
+            <GitHubIcon size={20} />
           </a>
           <a
             href="https://www.linkedin.com/in/shahdansalleh/"
@@ -131,7 +132,7 @@ export default function Hero() {
             className="text-muted hover:text-accent transition-all duration-200 hover:-translate-y-0.5"
             aria-label="LinkedIn"
           >
-            <Share2 size={20} />
+            <LinkedInIcon size={20} />
           </a>
           <a
             href="mailto:shahdantrade@gmail.com"
