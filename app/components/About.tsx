@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Code } from 'lucide-react';
+import { GitHubIcon } from './icons/BrandIcons';
 import { SKILLS } from '@/data/skills';
 import { EXPERIENCE } from '@/data/experience';
 
@@ -96,7 +96,7 @@ export default function About() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 border border-accent text-accent font-medium hover:bg-accent hover:text-bg transition-colors duration-200"
             >
-              <Code size={16} />
+              <GitHubIcon size={16} />
               View GitHub
             </Link>
           </motion.div>

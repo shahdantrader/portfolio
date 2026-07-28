@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -36,7 +39,10 @@ export default function RootLayout({
       className={`${cormorantGaramond.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg text-text font-body">
+        <Nav />
         {children}
+        <Footer />
+        <BackToTop />
       </body>
     </html>
   );
