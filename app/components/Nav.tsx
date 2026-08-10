@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react';
 const LINKS = [
   { href: '#about', label: 'About' },
   { href: '#projects', label: 'Projects' },
+  { href: '#personal-projects', label: 'Personal Projects' },
   { href: '#certificates', label: 'Certificates' },
   { href: '#contact', label: 'Contact' },
 ];
@@ -66,7 +67,7 @@ export default function Nav() {
           KS
         </a>
 
-        <ul className="hidden sm:flex items-center gap-10">
+        <ul className="hidden lg:flex items-center gap-7">
           {LINKS.map((link) => (
             <li key={link.href}>
               <a
@@ -84,7 +85,7 @@ export default function Nav() {
         </ul>
 
         <button
-          className="sm:hidden z-[101] p-2 text-text"
+          className="lg:hidden z-[101] p-2 text-text"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
@@ -94,7 +95,7 @@ export default function Nav() {
       </div>
 
       <div
-        className={`sm:hidden fixed inset-0 bg-bg flex items-center justify-center transition-opacity duration-[350ms] ${
+        className={`lg:hidden fixed inset-0 bg-bg flex items-center justify-center transition-opacity duration-[350ms] ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         aria-hidden={!menuOpen}
