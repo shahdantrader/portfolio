@@ -88,6 +88,10 @@
   --ease-in-out: var(--ease-in-out);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -107,4 +111,9 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
+}
+
+/* Keep anchor-jump targets clear of the fixed nav bar */
+section[id] {
+  scroll-margin-top: var(--nav-h);
 }

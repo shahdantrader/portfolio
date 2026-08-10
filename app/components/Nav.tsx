@@ -15,6 +15,7 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [skipOverlayFade, setSkipOverlayFade] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -88,16 +89,19 @@ export default function Nav() {
           className="lg:hidden z-[101] p-2 text-text"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((open) => !open)}
+          onClick={() => {
+            if (!menuOpen) setSkipOverlayFade(false);
+            setMenuOpen((open) => !open);
+          }}
         >
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
       <div
-        className={`lg:hidden fixed inset-0 bg-bg flex items-center justify-center transition-opacity duration-[350ms] ${
-          menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`lg:hidden fixed inset-0 bg-bg flex items-center justify-center ${
+          skipOverlayFade ? '' : 'transition-opacity duration-[350ms]'
+        } ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
         aria-hidden={!menuOpen}
       >
         <ul className="flex flex-col items-center gap-10">
@@ -106,7 +110,13 @@ export default function Nav() {
               <a
                 href={link.href}
                 className="font-display text-4xl font-light text-muted hover:text-accent transition-colors duration-200"
-                onClick={() => setMenuOpen(false)}
+                onClick={() => {
+                  // Close instantly (no fade) — the anchor jump happens
+                  // right away and a fading overlay would sit visibly on
+                  // top of the already-scrolled destination section.
+                  setSkipOverlayFade(true);
+                  setMenuOpen(false);
+                }}
               >
                 {link.label}
               </a>
